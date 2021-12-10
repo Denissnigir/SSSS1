@@ -125,6 +125,8 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CabelModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="cabelerd.vsdx" />
+    <None Include="CabelUseCase.vsdx" />
     <None Include="Model\CabelModel.edmx.diagram">
       <DependentUpon>CabelModel.edmx</DependentUpon>
     </None>
