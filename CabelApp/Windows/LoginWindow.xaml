@@ -1,0 +1,58 @@
+﻿<Window x:Class="CabelApp.Windows.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CabelApp.Windows"
+        mc:Ignorable="d"
+        Title="Login" MinHeight="450" MinWidth="800" Height="450" Width="800" Icon="/CabelApp;component/Resources/Photo/image.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.25*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Style="{StaticResource SecondaryGrid}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Image Source="/CabelApp;component/Resources/Photo/Лого ТНС.jpg"  Margin="5"/>
+            <TextBlock Grid.Column="1" Text="ООО «Телеком Нева Связь»" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="22"/>
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.6*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Номер телефона:" HorizontalAlignment="Right" FontSize="20" Margin="0, 0, 10, 10" VerticalAlignment="Bottom"/>
+                
+                    <TextBox Height="35" Width="300" x:Name="PhoneTB" VerticalAlignment="Bottom" Grid.Column="1" HorizontalAlignment="Left" Margin="10, 0, 0, 5"/>
+
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.6*"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Text="Пароль:" HorizontalAlignment="Right" FontSize="20" Margin="0, 0, 10, 0" VerticalAlignment="Center"/>
+                <TextBox x:Name="PasswordTB" Height="35" Width="300" Grid.Column="1" HorizontalAlignment="Left" Margin="10, 0, 0, 0"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" Style="{StaticResource SecondaryGrid}">
+            <Button Height="35" Width="200" Content="Войти" FontSize="18" Click="SignIn"/>
+
+        </Grid>
+    </Grid>
+</Window>

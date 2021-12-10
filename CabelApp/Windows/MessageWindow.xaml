@@ -1,0 +1,27 @@
+﻿<Window x:Class="CabelApp.Windows.MessageWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CabelApp.Windows"
+        mc:Ignorable="d"
+        Title="MessageWindow" Height="200" Width="400" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <Grid>
+        <GroupBox Header="SMS message" Margin="5">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0.3*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <Grid>
+                    <TextBlock Text="Вам пришло сообщение от: папич"/>
+                </Grid>
+
+                <Grid Grid.Row="1">
+                    <TextBlock x:Name="CodeTB" Text="Text: 'Здарова, обыкновенич, вот твой код для авторизации: '" TextWrapping="Wrap" TextAlignment="Center"/>
+                </Grid>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</Window>

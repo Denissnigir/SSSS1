@@ -1,0 +1,43 @@
+﻿<Window x:Class="CabelApp.Windows.CodeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CabelApp.Windows"
+        mc:Ignorable="d"
+        Title="Code" ResizeMode="NoResize" Height="250" Width="300" Icon="/CabelApp;component/Resources/Photo/image.ico">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Введите код из смс!"/>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="0.2*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBox x:Name="AnswerTB" Height="35" Width="150" HorizontalAlignment="Right" Margin="0, 0, 20, 0"/>
+                <Button Grid.Column="1"  Click="UpdateCode" Height="35" Width="35">
+                    <Button.Background>
+                        <ImageBrush ImageSource="/CabelApp;component/Resources/Photo/На авторизацию_Обновление кода.jpg"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="1" Style="{StaticResource SecondaryGrid}">
+            <Button x:Name="AcceptBtn" Height="30" Width="200" Content="Войти" Click="ValidateCode"/>
+
+        </Grid>
+    </Grid>
+</Window>
